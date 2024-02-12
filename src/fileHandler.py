@@ -14,7 +14,7 @@ def readFile(filePath):
             print("File tidak bisa dibuka.")
             exit(0)
     else:
-        print('{} :File tidak ditemukan.'.format(filePath))
+        print('{}: File tidak ditemukan. Program selesai'.format(filePath))
         exit(0)
     return lines
 

@@ -56,6 +56,11 @@ def playFile():
     matrix_token = parsed["matrix of token"]
     buff_size = int(parsed["buffer size"])
     sequences = parsed["sequences"]
+    time.sleep(0.5)
+    displayMatrix(matrix_token)
+    time.sleep(0.7)
+    displaySequences(sequences)
+    time.sleep(0.7)
 
     return matrix_token, buff_size, sequences
 

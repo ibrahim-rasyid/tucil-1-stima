@@ -1,7 +1,7 @@
 import time
 
 def displayMatrix(matrix):
-    print("Matriks yang telah dibuat secara random: ")
+    print("Matriks: ")
     time.sleep(1)
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
@@ -10,7 +10,7 @@ def displayMatrix(matrix):
         time.sleep(0.3)
 
 def displaySequences(sequences):
-    print("Sekuens beserta rewardnya yang telah dibuat secara random: ")
+    print("Sekuens beserta rewardnya: ")
     time.sleep(1)
     for sequence in sequences:
         print(f"{sequence}\n{sequences[sequence]}")
@@ -26,7 +26,7 @@ def displayResult(matrix, max_score, exe_time, best_steps):
     time.sleep(0.3)
     print("Token berada pada koordinat berikut:")
     for step in best_steps:
-        print(f"{step[0]} {step[1]}")
+        print(f"{step[1]+1} {step[0]+1}")
     time.sleep(0.3)
     print(f"Waktu eksekusi: {exe_time} ms")
 
