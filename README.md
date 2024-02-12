@@ -2,12 +2,16 @@
 > Penyelesaian Cyberpunk 2077 Breach Protocol dengan Algoritma Brute Force
 
 ## Daftar Isi
-- Informasi Umum
-- Setup
-- Penggunaan
+- [Informasi Umum](#informasi-umum)
+- [Setup](#setup)
+- [Penggunaan](#setup)
+- [Kontributor](#kontributor)
 
 ## Informasi Umum
 
 ## Setup
 
 ## Penggunaan
+
+## Kontributor
+- [Ibrahim Ihsan Rasyid](https://github.com/ibrahim-rasyid)
