@@ -8,11 +8,12 @@ def readFile(filePath):
         try:
             with open("test/" + filePath) as file:
                 lines = [line.rstrip() for line in file]
+            print("File ditemukan! Melakukan parsing...")
         except IOError as e:
-            print("File could not be opened.")
+            print("File tidak bisa dibuka.")
             exit(0)
     else:
-        print('{} :File was not found in the specified path.'.format(filePath))
+        print('{} :File tidak ditemukan.'.format(filePath))
         exit(0)
     return lines
 
@@ -34,9 +35,10 @@ def parseFile(lines):
         "number of sequence"    : num_seq,
         "sequences"             : sequences
     }
+    print("File berhasil di-parse!")
     return parsedLines
 
-def simpan_solusi(solusi):
+def simpan_solusi(score, exe_time, best_steps):
     dt = datetime.datetime.now().strftime("%d-%m-%y")
     parent_dir = "test/save_file/"
     dir = os.path.join(parent_dir, dt)
@@ -52,8 +54,10 @@ def simpan_solusi(solusi):
     else:
         print(f"Creating file {file_name}...")
     f = open(path, "w")
-    for elmt in solusi:
-        f.write(f"{elmt}\n")
+    f.write(f"{score}\n")
+    for step in best_steps:
+        f.write(f"{step[0]+1} {step[1]+1}\n")
+    f.write(f"{exe_time} ms\n")
 
 if __name__ == "__main__":
     lines = readFile("test1.txt")
