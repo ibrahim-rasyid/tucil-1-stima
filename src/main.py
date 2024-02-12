@@ -69,8 +69,11 @@ def playRandom():
     num_seq = int(input("Banyaknya sekuens: "))
     max_seq_len = int(input("Ukuran maksimal sekuens: "))
     matrix, sequences = generateRandom(unique_token, tokens, matrix_size, num_seq, max_seq_len)
+    time.sleep(0.5)
     displayMatrix(matrix)
+    time.sleep(0.7)
     displaySequences(sequences)
+    time.sleep(0.7)
     return matrix, buff_size, sequences
 
 def outro(score, exe_time, best_steps):
@@ -82,6 +85,16 @@ def outro(score, exe_time, best_steps):
 
 def exitGame():
     print("Thanks for using!")
+    print("""
+ _______  __   __  _______  __    _  ___   _    __   __  _______  __   __    ___   ____   
+|       ||  | |  ||   _   ||  |  | ||   | | |  |  | |  ||       ||  | |  |  |   | |    |  
+|_     _||  |_|  ||  |_|  ||   |_| ||   |_| |  |  |_|  ||   _   ||  | |  |  |___| |_    | 
+  |   |  |       ||       ||       ||      _|  |       ||  | |  ||  |_|  |   ___    |   | 
+  |   |  |       ||       ||  _    ||     |_   |_     _||  |_|  ||       |  |   |   |   | 
+  |   |  |   _   ||   _   || | |   ||    _  |    |   |  |       ||       |  |___|  _|   | 
+  |___|  |__| |__||__| |__||_|  |__||___| |_|    |___|  |_______||_______|        |____|  
+          """)
+    time.sleep(0.5)
 
 def main():
     opening()

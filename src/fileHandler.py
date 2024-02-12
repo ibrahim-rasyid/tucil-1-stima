@@ -1,4 +1,5 @@
 import os
+import time
 import protocol, matrix
 import datetime
 
@@ -44,20 +45,25 @@ def simpan_solusi(score, exe_time, best_steps):
     dir = os.path.join(parent_dir, dt)
     try:
         os.mkdir(dir)
-        print(f"Created {dt} directory. Saving...")
+        print(f"Directory {dt} telah dibuat. Menyimpan...")
     except FileExistsError:
-        print(f"Directory {dt} already exists. Saving...")
-    file_name = input("Enter file name: ")
+        print(f"Directory {dt} sudah ada. Menyimpan...")
+    time.sleep(0.8)
+    file_name = input("Masukkan nama file: ")
     path = os.path.join(dir, file_name)
     if os.path.exists(path):
-        print(f"File {file_name} already exists. Automatically overwrite...")
+        print(f"File {file_name} sudah ada. Overwrite otomatis...")
     else:
-        print(f"Creating file {file_name}...")
+        print(f"Membuat file {file_name}...")
+    time.sleep(0.8)
     f = open(path, "w")
     f.write(f"{score}\n")
     for step in best_steps:
         f.write(f"{step[0]+1} {step[1]+1}\n")
     f.write(f"{exe_time} ms\n")
+    f.close()
+    print("Selesai menyimpan")
+    time.sleep(0.5)
 
 if __name__ == "__main__":
     lines = readFile("test1.txt")

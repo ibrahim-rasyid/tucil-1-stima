@@ -2,15 +2,19 @@ import time
 
 def displayMatrix(matrix):
     print("Matriks yang telah dibuat secara random: ")
+    time.sleep(1)
     for i in range(len(matrix)):
         for j in range(len(matrix[i])):
             print(matrix[i][j], end=" ")
         print()
+        time.sleep(0.3)
 
 def displaySequences(sequences):
-    print("sekuens beserta rewardnya yang telah dibuat secara random: ")
+    print("Sekuens beserta rewardnya yang telah dibuat secara random: ")
+    time.sleep(1)
     for sequence in sequences:
         print(f"{sequence}\n{sequences[sequence]}")
+        time.sleep(0.3)
 
 def displayResult(matrix, max_score, exe_time, best_steps):
     print(f"Skor maksimal: {max_score}")
